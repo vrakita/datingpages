@@ -1,1 +1,0 @@
-page not found<?php /**PATH /Users/vrakita/projects/local/landings/views/404.blade.php ENDPATH**/ ?>
