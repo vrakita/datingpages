@@ -35,3 +35,16 @@ if( ! function_exists('translate')) {
     }
 
 }
+
+if( ! function_exists('asset')) {
+
+    function asset(string $path)
+    {
+
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http' . '://';
+
+        return $protocol . $_SERVER['SERVER_NAME'] . "/assets/" . $path;
+
+    }
+
+}

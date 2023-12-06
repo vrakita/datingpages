@@ -9,7 +9,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="assets/lp1/css/style.css">
+		<link rel="stylesheet" href="{{asset($template . "/css/style.css")}}">
 		<meta name="description" content="">
 		<meta name="author" content="">
 	</head>
@@ -80,44 +80,44 @@
 				</div>
 
 				<div class="map-pin map-pin-1">
-					<div class="img-wrapper" style="background-image: url('assets/lp1/images/u1.jpg')"></div>
-					<p>Tiffany <img src="assets/lp1/images/pin.svg" alt="" width="20"> 1250m</p>
+					<div class="img-wrapper" style="background-image: url('{{asset($template . "/images/u1.jpg")}}')"></div>
+					<p>Tiffany <img src="{{asset($template . "/images/pin.svg")}}" alt="" width="20"> 1250m</p>
 					<a href="javascript:;" class="btn">Click to view</a>
 				</div>
 
 				<div class="map-pin map-pin-2">
-					<div class="img-wrapper" style="background-image: url('assets/lp1/images/u2.jpg')"></div>
-					<p>Tiffany <img src="assets/lp1/images/pin.svg" alt="" width="20"> 1250m</p>
+					<div class="img-wrapper" style="background-image: url('{{asset($template . "/images/u2.jpg")}}')"></div>
+					<p>Tiffany <img src="{{asset($template . "/images/pin.svg")}}" alt="" width="20"> 1250m</p>
 					<a href="javascript:;" class="btn">Click to view</a>
 				</div>
 
 				<div class="map-pin map-pin-3">
-					<div class="img-wrapper" style="background-image: url('assets/lp1/images/u3.jpg')"></div>
+					<div class="img-wrapper" style="background-image: url('{{asset($template . "/images/u3.jpg")}}')"></div>
 					<p>Tiffany <img src="assets/lp1/images/pin.svg" alt="" width="20"> 1250m</p>
 					<a href="javascript:;" class="btn">Click to view</a>
 				</div>
 
 				<div class="map-pin map-pin-4">
-					<div class="img-wrapper" style="background-image: url('assets/lp1/images/u4.jpg')"></div>
-					<p>Tiffany <img src="assets/lp1/images/pin.svg" alt="" width="20"> 1250m</p>
+					<div class="img-wrapper" style="background-image: url('{{asset($template . "/images/u4.jpg")}}')"></div>
+					<p>Tiffany <img src="{{asset($template . "/images/pin.svg")}}" alt="" width="20"> 1250m</p>
 					<a href="javascript:;" class="btn">Click to view</a>
 				</div>
 
 				<div class="map-pin map-pin-5">
-					<div class="img-wrapper" style="background-image: url('assets/lp1/images/u5.jpg')"></div>
-					<p>Tiffany <img src="assets/lp1/images/pin.svg" alt="" width="20"> 1250m</p>
+					<div class="img-wrapper" style="background-image: url('{{asset($template . "/images/u5.jpg")}}')"></div>
+					<p>Tiffany <img src="{{asset($template . "/images/pin.svg")}}" alt="" width="20"> 1250m</p>
 					<a href="javascript:;" class="btn">Click to view</a>
 				</div>
 				<div class="map-pin map-pin-6">
-					<div class="img-wrapper" style="background-image: url('assets/lp1/images/u6.jpg')"></div>
-					<p>Tiffany <img src="assets/lp1/images/pin.svg" alt="" width="20"> 1250m</p>
+					<div class="img-wrapper" style="background-image: url('{{asset($template . "/images/u6.jpg")}}')"></div>
+					<p>Tiffany <img src="{{asset($template . "/images/pin.svg")}}" alt="" width="20"> 1250m</p>
 					<a href="javascript:;" class="btn">Click to view</a>
 				</div>
 			</section>
 		</main>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="assets/lp1/js/app.js"></script>
+		<script src="{{asset($template . "/js/app.js")}}"></script>
 
 	</body>
 
