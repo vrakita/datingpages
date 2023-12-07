@@ -11,7 +11,7 @@ class BaseController {
 
     public function __construct() {
 
-        $this->view = new \Jenssegers\Blade\Blade(__DIR__ . '/../../views', __DIR__ . '/../../cache');
+        $this->view = new \Jenssegers\Blade\Blade(basePath() . '/../views', basePath() . '/../cache');
         $this->router = Router::getInstance();
 
     }
