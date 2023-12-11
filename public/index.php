@@ -1,8 +1,5 @@
 <?php
 
-require "../bootstrap.php";
+require __DIR__ . '/../vendor/autoload.php';
 
-$router->get('/{template}', 'App\Controllers\HomeController@index');
-$router->set404('App\Controllers\BaseController@pageNotFound');
-
-$router->run();
+$app = \App\Application::run();

@@ -21,7 +21,7 @@
 				<div class="popup active" id="popup1">
 					<div class="popup__overlay"></div>
 					<div class="popup__content">
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta velit suscipit illum, libero optio aspernatur. Eius dolorem dolores recusandae labore!</p>
+						<p>{{translate('hello')}}</p>
 						<div class="loader-wrapper">
 					        <div class="circle circle-1"></div>
 					        <div class="circle circle-2"></div>

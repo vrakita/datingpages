@@ -2,18 +2,20 @@
 
 namespace App\Controllers;
 
-use App\Landing\Router;
+use App\Application;
 
 class BaseController {
 
     protected $view;
     protected $router;
 
-    public function __construct() {
+    public function __construct()
+    {
 
-        $this->view = new \Jenssegers\Blade\Blade(basePath() . '/../views', basePath() . '/../cache');
-        $this->router = Router::getInstance();
+        $application = Application::getInstance();
 
+        $this->view = $application->getView();
+        $this->router = $application->getRouter();
     }
 
     public function render(string $template, array $params = [])

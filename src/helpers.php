@@ -21,15 +21,15 @@ if( ! function_exists('getBaseURL')) {
 
 if( ! function_exists('translate')) {
 
-    function translate(string $language, string $key)
+    function translate(string $key)
     {
 
-        $dictonary = [];
+        $application = \App\Application::getInstance();
 
         return array_reduce(
-            [$language, ...explode('.', $key)],
+            [$application->getLanguage(), ...explode('.', $key)],
             fn($acc, $item) => $acc[$item] ?? null,
-            $dictonary
+            $application->getTranslations()
         ) ?? $key;
 
     }
