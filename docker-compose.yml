@@ -30,6 +30,5 @@ services:
       - ./:/var/www/html
     depends_on:
       - php
-    working_dir: /var/www/html
     entrypoint: ["composer", "--ignore-platform-reqs"]
     profiles: [ "ignore" ]
