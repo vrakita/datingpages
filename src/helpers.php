@@ -56,7 +56,7 @@ if( ! function_exists('asset')) {
 
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http' . '://';
 
-        return $protocol . $_SERVER['SERVER_NAME'] . "/assets/" . $path;
+        return $protocol . $_SERVER['SERVER_NAME'] . "/assets/" . \App\Application::getInstance()->getTemplate() . $path;
 
     }
 
