@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{asset('style.css')}}">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 </head>
 
 <body>
@@ -145,7 +145,7 @@
     createApp({
         data() {
             return {
-                videoSource: '{{asset('images/video.mp4')}}',
+                videoSource: '{{asset('videos/video.mp4')}}',
                 playing: false,
                 currentStep: 1,
                 stepsMax: 3,
