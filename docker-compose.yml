@@ -10,9 +10,6 @@ services:
   php:
     build:
       context: ./docker/php
-      args:
-        - UID=${UID:-1000}
-        - GID=${GID:-1000}
     volumes:
       - ./:/var/www/html
       - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
