@@ -19,13 +19,15 @@ class Application
 
     protected Blade $view;
 
+    protected string $template;
+
     private function __construct() {}
 
-    public static function getInstance()
+    public static function getInstance(): Application
     {
 
         if( ! static::$instance) {
-            static::$instance = new self;
+            static::$instance = new static;
         }
 
         return static::$instance;
@@ -34,16 +36,18 @@ class Application
 
         $instance               = static::getInstance();
 
+        $instance->setLanguage();
+
+        $instance->template     = getURLSegment();
+
         $instance->translations = TranslationService::load();
 
         $instance->router       = new Router;
 
-        $instance->view         = new Blade(basePath() . '/views', basePath() . '/cache');
-
-        $instance->language     = isset($_GET['lang']) && in_array($_GET['lang'], ['de', 'if', 'fr']) ? $_GET['lang'] : 'en';
-
         $instance->router->get('/{template}', 'App\Controllers\HomeController@index');
         $instance->router->set404('App\Controllers\BaseController@pageNotFound');
+
+        $instance->view         = new Blade(basePath() . '/views', basePath() . '/cache');
 
         $instance->router->run();
 
@@ -68,5 +72,15 @@ class Application
     public function getView(): Blade
     {
         return $this->view;
+    }
+
+    public function getTemplate(): string
+    {
+        return $this->template;
+    }
+
+    protected function setLanguage()
+    {
+        $this->language = isset($_GET['lang']) && in_array(strtolower($_GET['lang']), ['de', 'if', 'fr']) ? strtolower($_GET['lang']) : 'en';
     }
 }

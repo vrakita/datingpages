@@ -1,13 +1,14 @@
 <?php
 
-if( ! function_exists('getBaseURL')) {
+if( ! function_exists('getCurrentURL')) {
 
-    function getBaseURL(): string
+    function getCurrentURL(): string
     {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http' . '://';
         $host = $_SERVER['HTTP_HOST'];
         $port = $_SERVER['SERVER_PORT'];
-        $baseUrl = $protocol.$host;
+//        $baseUrl = $protocol.$host;
+        $baseUrl = $host;
 
         $currentPath = strtok($_SERVER['REQUEST_URI'], '?');
 
@@ -54,6 +55,21 @@ if( ! function_exists('basePath')) {
     function basePath()
     {
         return dirname(__DIR__);
+    }
+
+}
+
+if( ! function_exists('getURLSegment')) {
+
+    function getURLSegment($segment = 1): ?string
+    {
+        $parts = explode('/', getCurrentURL());
+
+        if(count($parts) < $segment - 1) {
+            return null;
+        }
+
+        return $parts[$segment] ?? null;
     }
 
 }

@@ -1,1 +1,66 @@
-{"en":{"hello":"World"},"de":{"hello":"Welt"},"it":{"hello":"Mondo"},"fr":{"hello":"Monde"}}
+{
+    "en": {
+        "lp1": {
+            "would_you_like_to_meet": "Would you like to meet discreetly with verified women in your area?",
+            "confirm": "Confirm",
+            "we_found_1000_babies": "WE FOUND 2773 sugarbabies in Zürich",
+            "do_you_want_to_interact": "Do you want to interact with sexy sugar babies?",
+            "yes": "Yes",
+            "no": "No",
+            "are_you_interested_in_women": "Are you interested in women who are open to sexual encounters on the first date?",
+            "are_you_over_21": "Are you over 21?",
+            "congratulations": "Congratulations!",
+            "your_perfect_partner_is_waiting": "Your perfect partner is waiting for you! Sign up and chat now!",
+            "start": "Start",
+            "click_to_view": "Click to view"
+        }
+    },
+    "de": {
+        "lp1": {
+            "would_you_like_to_meet": "Möchten Sie sich diskret mit verifizierten Frauen in Ihrer Umgebung treffen?",
+            "confirm": "Bestätigen",
+            "we_found_1000_babies": "WIR FUNDEN 2453 sugarbabies in Zürich",
+            "do_you_want_to_interact": "Willst du mit sexy Sugarbabies interagieren?",
+            "yes": "Ja",
+            "no": "Nein",
+            "are_you_interested_in_women": "Sind Sie an Frauen interessiert, die beim ersten Date offen für sexuelle Begegnungen sind?",
+            "are_you_over_21": "Sind Sie über 21?",
+            "congratulations": "Herzlichen Glückwunsch!\n",
+            "your_perfect_partner_is_waiting": "Ihr perfekter Partner wartet auf Sie! Melden Sie sich an und chatten Sie jetzt!\n\n",
+            "start": "Start",
+            "click_to_view": "Zur Ansicht klicken"
+        }
+    },
+    "it": {
+        "lp1": {
+            "would_you_like_to_meet": "Vuoi fare incontri discreti con donne verificate nella tua zona?",
+            "confirm": "Confermare",
+            "we_found_1000_babies": "ABBIAMO TROVATO 2773 sugarbabies a Zurigo",
+            "do_you_want_to_interact": "Volete interagire con sexy sugar babies?",
+            "yes": "SÌ",
+            "no": "No",
+            "are_you_interested_in_women": "Siete interessati a donne che sono aperte a incontri sessuali al primo appuntamento?",
+            "are_you_over_21": "Hai più di 21 anni?",
+            "congratulations": "Congratulazioni!",
+            "your_perfect_partner_is_waiting": "Il tuo partner ideale ti sta aspettando! Iscriviti e chatta ora!",
+            "start": "Start",
+            "click_to_view": "Click to view"
+        }
+    },
+    "fr": {
+        "lp1": {
+            "would_you_like_to_meet": "Vuoi fare incontri discreti con donne verificate nella tua zona?",
+            "confirm": "Confirmer",
+            "we_found_1000_babies": "NOUS AVONS TROUVÉ 2773 sugarbabies à Zürich",
+            "do_you_want_to_interact": "Voulez-vous interagir avec des sugar babies sexy ?",
+            "yes": "Oui",
+            "no": "Non",
+            "are_you_interested_in_women": "Êtes-vous intéressé par des femmes qui sont ouvertes à des rencontres sexuelles lors du premier rendez-vous ?",
+            "are_you_over_21": "Avez-vous plus de 21 ans ?",
+            "congratulations": "Félicitations !",
+            "your_perfect_partner_is_waiting": "Votre partenaire idéal vous attend ! Inscrivez-vous et chattez maintenant !",
+            "start": "Démarrage",
+            "click_to_view": "Cliquez pour voir"
+        }
+    }
+}
