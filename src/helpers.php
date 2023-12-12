@@ -22,19 +22,31 @@ if( ! function_exists('getCurrentURL')) {
 
 if( ! function_exists('translate')) {
 
-    function translate(string $key)
+    function translate(string $key, $params = [])
     {
 
         $application = \App\Application::getInstance();
 
         return array_reduce(
             [$application->getLanguage(), ...explode('.', $key)],
-            fn($acc, $item) => $acc[$item] ?? null,
+            fn($acc, $item) => substitute($acc[$item], $params) ?? null,
             $application->getTranslations()
         ) ?? $key;
 
     }
 
+}
+
+function substitute($string, $params)
+{
+
+    foreach($params as $name => $value) {
+        if(strpos($string, '{' . $name . '}') !== false) {
+            $string = str_replace('{' . $name . '}', $value, $string);
+        }
+    }
+
+    return $string;
 }
 
 if( ! function_exists('asset')) {

@@ -3,7 +3,7 @@
         "lp1": {
             "would_you_like_to_meet": "Would you like to meet discreetly with verified women in your area?",
             "confirm": "Confirm",
-            "we_found_1000_babies": "WE FOUND 2773 sugarbabies in Zürich",
+            "we_found_1000_babies": "WE FOUND {number} sugarbabies in {location}",
             "do_you_want_to_interact": "Do you want to interact with sexy sugar babies?",
             "yes": "Yes",
             "no": "No",
@@ -19,7 +19,7 @@
         "lp1": {
             "would_you_like_to_meet": "Möchten Sie sich diskret mit verifizierten Frauen in Ihrer Umgebung treffen?",
             "confirm": "Bestätigen",
-            "we_found_1000_babies": "WIR FUNDEN 2453 sugarbabies in Zürich",
+            "we_found_1000_babies": "WIR FUNDEN {number} sugarbabies in {location}",
             "do_you_want_to_interact": "Willst du mit sexy Sugarbabies interagieren?",
             "yes": "Ja",
             "no": "Nein",
@@ -35,7 +35,7 @@
         "lp1": {
             "would_you_like_to_meet": "Vuoi fare incontri discreti con donne verificate nella tua zona?",
             "confirm": "Confermare",
-            "we_found_1000_babies": "ABBIAMO TROVATO 2773 sugarbabies a Zurigo",
+            "we_found_1000_babies": "ABBIAMO TROVATO {number} sugarbabies a {location}",
             "do_you_want_to_interact": "Volete interagire con sexy sugar babies?",
             "yes": "SÌ",
             "no": "No",
@@ -49,9 +49,9 @@
     },
     "fr": {
         "lp1": {
-            "would_you_like_to_meet": "Vuoi fare incontri discreti con donne verificate nella tua zona?",
+            "would_you_like_to_meet": "Vous souhaitez rencontrer discrètement des femmes vérifiées dans votre région ?",
             "confirm": "Confirmer",
-            "we_found_1000_babies": "NOUS AVONS TROUVÉ 2773 sugarbabies à Zürich",
+            "we_found_1000_babies": "NOUS AVONS TROUVÉ {number} sugarbabies à {location}",
             "do_you_want_to_interact": "Voulez-vous interagir avec des sugar babies sexy ?",
             "yes": "Oui",
             "no": "Non",

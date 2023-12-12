@@ -5,6 +5,7 @@ namespace App;
 use App\Translations\TranslationService;
 use Bramus\Router\Router;
 use Jenssegers\Blade\Blade;
+use Dotenv\Dotenv;
 
 class Application
 {
@@ -35,6 +36,8 @@ class Application
     public static function run() {
 
         $instance               = static::getInstance();
+
+        Dotenv::createImmutable(basePath())->load();
 
         $instance->setLanguage();
 
@@ -81,6 +84,6 @@ class Application
 
     protected function setLanguage()
     {
-        $this->language = isset($_GET['lang']) && in_array(strtolower($_GET['lang']), ['de', 'if', 'fr']) ? strtolower($_GET['lang']) : 'en';
+        $this->language = isset($_GET['lang']) && in_array(strtolower($_GET['lang']), ['de', 'it', 'fr']) ? strtolower($_GET['lang']) : 'en';
     }
 }
