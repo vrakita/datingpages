@@ -34,17 +34,17 @@
         <transition name="fade" mode="out-in"></transition>
         <article v-if="currentStep === 1" class="step-1">
             <h1 class="clr-gold"><strong>Vicky · @{{city}}, 06</strong></h1>
-            <h2>Shared a sexy video with you</h2>
+            <h2>{{translate('lp2.shared_a_sexy_video')}}</h2>
             <button @click="step(2)" class="btn-circle">
                 <svg width="50" style="margin-left: 5px;" viewBox="0 0 512 512"xml:space="preserve"><path fill="#fff" d="M405.2 232.9 126.8 67.2c-3.4-2-6.9-3.2-10.9-3.2-10.9 0-19.8 9-19.8 20H96v344h.1c0 11 8.9 20 19.8 20 4.1 0 7.5-1.4 11.2-3.4l278.1-165.5c6.6-5.5 10.8-13.8 10.8-23.1s-4.2-17.5-10.8-23.1z"/></svg>
             </button>
-            <p>#1 free cam site. <br>
-                Must be 18+</p>
+            <p>{{translate('lp2.1_sugardaddy_site')}} <br>
+                {{translate('lp2.must_be_18')}}</p>
         </article>
         <transition name="fade" mode="out-in">
             <article v-if="currentStep === 2">
-                <h1><strong class="clr-gold">Vicky </strong> is located in <strong>Novi Sad, 06.</strong></h1>
-                <h2>Are you looking for cam girls near you?</h2>
+                <h1><strong class="clr-gold">Vicky </strong> {{translate('lp2.is_located_in')}} <strong>Novi Sad, 06.</strong></h1>
+                <h2>{{translate('lp2.are_you_looking')}}</h2>
                 <div class="btn-wrapper">
                     <button @click="step(3)" class="btn-circle btn-circle-white">
                         <svg fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="40" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" stroke="none"/><path d="M18 6 6 18M6 6l12 12"/></svg>
@@ -57,7 +57,7 @@
         </transition>
         <transition name="fade" mode="out-in">
             <article v-if="currentStep === 3">
-                <h1><strong class="clr-gold">Vicky </strong> gets horny reading <strong>hot messages.</strong></h1>
+                <h1><strong class="clr-gold">Vicky {{translate('lp2.cant_wait_to_chat')}}</h1>
                 <h2>Would you be willing to chat?</h2>
                 <div class="btn-wrapper">
                     <a class="btn-circle btn-circle-white" href="{{$_ENV['REDIRECT_URL']}}">

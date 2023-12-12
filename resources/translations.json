@@ -3,7 +3,7 @@
         "lp1": {
             "would_you_like_to_meet": "Would you like to meet discreetly with verified women in your area?",
             "confirm": "Confirm",
-            "we_found_1000_babies": "WE FOUND {number} sugarbabies in {location}",
+            "we_found_num": "WE FOUND",
             "do_you_want_to_interact": "Do you want to interact with sexy sugar babies?",
             "yes": "Yes",
             "no": "No",
@@ -12,14 +12,25 @@
             "congratulations": "Congratulations!",
             "your_perfect_partner_is_waiting": "Your perfect partner is waiting for you! Sign up and chat now!",
             "start": "Start",
-            "click_to_view": "Click to view"
+            "click_to_view": "Click to view",
+            "sugarbabies_in": "sugarbabies in"
+        },
+        "lp2": {
+            "girl_name": "Sophia",
+            "shared_a_sexy_video": "Shared a sexy video with you",
+            "1_sugardaddy_site": "#1 SugarDaddy dating site",
+            "must_be_18": "Must be 21+",
+            "is_located_in": "is located in",
+            "are_you_looking": "Are you looking for sexy sugarbabies near you?",
+            "cant_wait_to_chat": "is looking for a gentleman who knows what he wants.",
+            "would_you_be_willing_to_chat": "Would you be willing to meet her?"
         }
     },
     "de": {
         "lp1": {
             "would_you_like_to_meet": "Möchten Sie sich diskret mit verifizierten Frauen in Ihrer Umgebung treffen?",
             "confirm": "Bestätigen",
-            "we_found_1000_babies": "WIR FUNDEN {number} sugarbabies in {location}",
+            "we_found_num": "WIR FUNDEN",
             "do_you_want_to_interact": "Willst du mit sexy Sugarbabies interagieren?",
             "yes": "Ja",
             "no": "Nein",
@@ -28,30 +39,25 @@
             "congratulations": "Herzlichen Glückwunsch!\n",
             "your_perfect_partner_is_waiting": "Ihr perfekter Partner wartet auf Sie! Melden Sie sich an und chatten Sie jetzt!\n\n",
             "start": "Start",
-            "click_to_view": "Zur Ansicht klicken"
-        }
-    },
-    "it": {
-        "lp1": {
-            "would_you_like_to_meet": "Vuoi fare incontri discreti con donne verificate nella tua zona?",
-            "confirm": "Confermare",
-            "we_found_1000_babies": "ABBIAMO TROVATO {number} sugarbabies a {location}",
-            "do_you_want_to_interact": "Volete interagire con sexy sugar babies?",
-            "yes": "SÌ",
-            "no": "No",
-            "are_you_interested_in_women": "Siete interessati a donne che sono aperte a incontri sessuali al primo appuntamento?",
-            "are_you_over_21": "Hai più di 21 anni?",
-            "congratulations": "Congratulazioni!",
-            "your_perfect_partner_is_waiting": "Il tuo partner ideale ti sta aspettando! Iscriviti e chatta ora!",
-            "start": "Start",
-            "click_to_view": "Click to view"
+            "click_to_view": "Zur Ansicht klicken",
+            "sugarbabies_in": "Sugarbabies in"
+        },
+        "lp2": {
+            "girl_name": "Sophia",
+            "shared_a_sexy_video": "Ein sexy Video mit dir geteilt",
+            "1_sugardaddy_site": "#Nr. 1 SugarDaddy Dating-Website",
+            "must_be_18": "Muss 21+ sein",
+            "is_located_in": "befindet sich in",
+            "are_you_looking": "Suchst du nach sexy Sugarbabies in deiner Nähe?",
+            "cant_wait_to_chat": "sucht einen Gentleman, der weiß, was er will.",
+            "would_you_be_willing_to_chat": "Wären Sie bereit, sie zu treffen?"
         }
     },
     "fr": {
         "lp1": {
             "would_you_like_to_meet": "Vous souhaitez rencontrer discrètement des femmes vérifiées dans votre région ?",
             "confirm": "Confirmer",
-            "we_found_1000_babies": "NOUS AVONS TROUVÉ {number} sugarbabies à {location}",
+            "we_found_num": "NOUS AVONS TROUVÉ",
             "do_you_want_to_interact": "Voulez-vous interagir avec des sugar babies sexy ?",
             "yes": "Oui",
             "no": "Non",
@@ -60,7 +66,45 @@
             "congratulations": "Félicitations !",
             "your_perfect_partner_is_waiting": "Votre partenaire idéal vous attend ! Inscrivez-vous et chattez maintenant !",
             "start": "Démarrage",
-            "click_to_view": "Cliquez pour voir"
+            "click_to_view": "Cliquez pour voir",
+            "sugarbabies_in": "sugarbabies à"
+        },
+        "lp2": {
+            "girl_name": "Sophia",
+            "shared_a_sexy_video": "Partager une vidéo sexy avec vous",
+            "1_sugardaddy_site": "Site de rencontre SugarDaddy n°1",
+            "must_be_18": "Doit être âgé de plus de 21 ans",
+            "is_located_in": "est situé à",
+            "are_you_looking": "Vous cherchez une sugarbabie sexy près de chez vous ?",
+            "cant_wait_to_chat": "recherche un homme qui sait ce qu'il veut.",
+            "would_you_be_willing_to_chat": "Accepteriez-vous de la rencontrer ?"
+        }
+    },
+    "it": {
+        "lp1": {
+            "would_you_like_to_meet": "Vuoi fare incontri discreti con donne verificate nella tua zona?",
+            "confirm": "Confermare",
+            "we_found_num": "ABBIAMO TROVATO",
+            "do_you_want_to_interact": "Volete interagire con sexy sugar babies?",
+            "yes": "SÌ",
+            "no": "No",
+            "are_you_interested_in_women": "Siete interessati a donne che sono aperte a incontri sessuali al primo appuntamento?",
+            "are_you_over_21": "Hai più di 21 anni?",
+            "congratulations": "Congratulazioni!",
+            "your_perfect_partner_is_waiting": "Il tuo partner ideale ti sta aspettando! Iscriviti e chatta ora!",
+            "start": "Start",
+            "click_to_view": "Clicca per vedere",
+            "sugarbabies_in": "sugarbabies in"
+        },
+        "lp2": {
+            "girl_name": "Sophia",
+            "shared_a_sexy_video": "Condividere con voi un video sexy",
+            "1_sugardaddy_site": "#1 Sito di incontri SugarDaddy",
+            "must_be_18": "Deve avere più di 21 anni",
+            "is_located_in": "si trova in",
+            "are_you_looking": "Sei alla ricerca di sexy sugarbabies vicino a te?",
+            "cant_wait_to_chat": "cerca un gentiluomo che sappia cosa vuole.",
+            "would_you_be_willing_to_chat": "Sarebbe disposto a incontrarla?"
         }
     }
 }

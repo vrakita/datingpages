@@ -35,7 +35,7 @@
 					    </div>
 						<div class="confirm-box" style="display: none;">
 							<a href="javascript:;" class="btn confirm">{{translate('lp1.confirm')}}</a>
-						    <p>WE FOUND <strong class="number"></strong> in <strong class="city"></strong></p>
+						    <p>{{translate('lp1.we_found_num')}} <strong class="number"></strong> in <strong class="city"></strong></p>
 						</div>
 					</div>
 				</div>
