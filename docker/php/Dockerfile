@@ -1,34 +1,83 @@
-FROM php:8-fpm-alpine
+FROM php:8.2-fpm
 
-ARG UID
-ARG GID
+ARG PHP_RUN_DEPS="\
+    libbz2-1.0 \
+    libxslt1.1 \
+    libpng16-16 \
+    libfreetype6 \
+    libxpm4 \
+    libxml2 \
+    libjpeg62-turbo \
+    libzip4 \
+    libgmp10"
 
-ENV UID=${UID}
-ENV GID=${GID}
 
-RUN mkdir -p /var/www/html
+ARG PHP_BUILD_DEPS="\
+    libpq-dev \
+    libpng-dev \
+    libwebp-dev \
+    libjpeg62-turbo-dev \
+    libxpm-dev \
+    libxml2-dev \
+    libfreetype6-dev \
+    libgmp-dev \
+    libicu-dev \
+    libbz2-dev \
+    libzip-dev \
+    autoconf \
+    g++ \
+    make"
+
+ARG PHP_EXTENSIONS="\
+    gd \
+    gmp \
+    intl \
+    pdo_mysql \
+    bcmath \
+    bz2 \
+    sockets \
+    soap \
+    pcntl \
+    zip"
+
+ARG PHP_PECL_EXTENSIONS="\
+    apcu \
+    redis \
+    xdebug"
+
+RUN apt update -y \
+    && apt install -y \
+    bash \
+    curl \
+    unzip \
+    zip \
+    default-mysql-client \
+    ${PHP_RUN_DEPS} \
+    && \
+    apt install -y ${PHP_BUILD_DEPS} \
+    && rm -rf /var/lib/apt/lists/ \
+    && docker-php-ext-configure gd \
+      --disable-gd-jis-conv \
+      --with-freetype=/usr \
+      --with-jpeg=/usr \
+      --with-webp=/usr \
+      --with-xpm=/usr \
+    && docker-php-ext-install -j5 ${PHP_EXTENSIONS} \
+    && pecl install -o -f ${PHP_PECL_EXTENSIONS} \
+    && rm -rf /tmp/pear \
+    && docker-php-ext-enable ${PHP_EXTENSIONS} redis xdebug \
+    && apt remove -y $PHP_BUILD_DEPS \
+    && apt clean
+
+# Install composer
+COPY --from=composer/composer:2-bin /composer /usr/bin/composer
+
+# Set www-data to have UID 1000
+RUN usermod -u 1000 www-data;
+
+RUN mkdir -p /var/www/.composer /var/www/html /var/www/.config/psysh \
+    && chown -R www-data:www-data /var/www/html /var/www/.composer /var/www/.config/psysh
 
 WORKDIR /var/www/html
 
-COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
-
-# MacOS staff group's gid is 20, so is the dialout group in alpine linux. We're not using it, let's just remove it.
-RUN delgroup dialout
-
-RUN addgroup -g ${GID} --system laravel
-RUN adduser -G laravel --system -D -s /bin/sh -u ${UID} laravel
-
-RUN sed -i "s/user = www-data/user = laravel/g" /usr/local/etc/php-fpm.d/www.conf
-RUN sed -i "s/group = www-data/group = laravel/g" /usr/local/etc/php-fpm.d/www.conf
-RUN echo "php_admin_flag[log_errors] = on" >> /usr/local/etc/php-fpm.d/www.conf
-
-RUN docker-php-ext-install pdo pdo_mysql
-
-RUN mkdir -p /usr/src/php/ext/redis \
-    && curl -L https://github.com/phpredis/phpredis/archive/5.3.4.tar.gz | tar xvz -C /usr/src/php/ext/redis --strip 1 \
-    && echo 'redis' >> /usr/src/php-available-exts \
-    && docker-php-ext-install redis
-
-USER laravel
-
-CMD ["php-fpm", "-y", "/usr/local/etc/php-fpm.conf", "-R"]
+USER www-data
