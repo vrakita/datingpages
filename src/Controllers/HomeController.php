@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class HomeController extends BaseController {
 
-    const AVAILABLE_TEMPLATES = ['lp1'];
+    const AVAILABLE_TEMPLATES = ['lp1', 'lp2'];
 
     public function index($template)
     {
@@ -13,7 +13,7 @@ class HomeController extends BaseController {
             return $this->router->trigger404();
 
         return $this->render('templates.' . $template, ['template' => $template]);
-        
+
     }
 
 }
