@@ -38,7 +38,7 @@ class Application
 
         $instance->router       = new Router;
 
-        $instance->view         = new Blade(basePath() . '/../views', basePath() . '/../cache');
+        $instance->view         = new Blade(basePath() . '/views', basePath() . '/cache');
 
         $instance->language     = isset($_GET['lang']) && in_array($_GET['lang'], ['de', 'if', 'fr']) ? $_GET['lang'] : 'en';
 

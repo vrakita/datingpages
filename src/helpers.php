@@ -53,7 +53,7 @@ if( ! function_exists('basePath')) {
 
     function basePath()
     {
-        return __DIR__;
+        return dirname(__DIR__);
     }
 
 }
