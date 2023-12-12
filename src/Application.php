@@ -20,7 +20,7 @@ class Application
 
     protected Blade $view;
 
-    protected string $template;
+    protected ?string $template;
 
     private function __construct() {}
 
