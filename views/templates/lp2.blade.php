@@ -41,7 +41,6 @@
             <p>#1 free cam site. <br>
                 Must be 18+</p>
         </article>
-        </transition>
         <transition name="fade" mode="out-in">
             <article v-if="currentStep === 2">
                 <h1><strong class="clr-gold">Vicky </strong> is located in <strong>Novi Sad, 06.</strong></h1>
