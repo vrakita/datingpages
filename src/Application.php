@@ -50,7 +50,7 @@ class Application
         $instance->router->get('/{template}', 'App\Controllers\HomeController@index');
         $instance->router->set404('App\Controllers\BaseController@pageNotFound');
 
-        $instance->view         = new Blade(basePath() . '/views', basePath() . '/cache');
+        $instance->view         = new Blade(basePath('views'), basePath('cache'));
 
         $instance->router->run();
 

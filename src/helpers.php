@@ -63,9 +63,15 @@ if( ! function_exists('asset')) {
 
 if( ! function_exists('basePath')) {
 
-    function basePath()
+    function basePath(string $path = '')
     {
-        return dirname(__DIR__);
+        $root = dirname(__DIR__);
+
+        if($path && $path[0] !== '/') {
+            $path = '/' . $path;
+        }
+
+        return $path ? $root . $path : $root;
     }
 
 }
