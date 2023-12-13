@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class HomeController extends BaseController {
 
-    const AVAILABLE_TEMPLATES = ['lp1', 'lp2'];
+    const AVAILABLE_TEMPLATES = ['lp1', 'lp2', 'lp3', 'lp4', 'lp5'];
 
     public function index($template)
     {
