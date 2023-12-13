@@ -79,32 +79,32 @@
 				</div>
 				<div class="map-pin map-pin-1">
 					<div class="img-wrapper" style="background-image: url('{{asset("/images/u1.jpg")}}')"></div>
-					<p>Tiffany <img src="{{asset("/images/pin.svg")}}" alt="" width="20"> 1250m</p>
+					<p>Hannah <img src="{{asset("/images/pin.svg")}}" alt="" width="20"> 712m</p>
 					<a href="javascript:;" class="btn">{{translate('lp1.click_to_view')}}</a>
 				</div>
 				<div class="map-pin map-pin-2">
 					<div class="img-wrapper" style="background-image: url('{{asset("images/u2.jpg")}}')"></div>
-					<p>Tiffany <img src="{{asset("images/pin.svg")}}" alt="" width="20"> 1250m</p>
+					<p>Lina <img src="{{asset("images/pin.svg")}}" alt="" width="20"> 1430m</p>
 					<a href="javascript:;" class="btn">{{translate('lp1.click_to_view')}}</a>
 				</div>
 				<div class="map-pin map-pin-3">
 					<div class="img-wrapper" style="background-image: url('{{asset("/images/u3.jpg")}}')"></div>
-					<p>Tiffany <img src="{{asset('images/pin.svg')}}" alt="" width="20"> 1250m</p>
+					<p>Charlotte <img src="{{asset('images/pin.svg')}}" alt="" width="20"> 1250m</p>
 					<a href="javascript:;" class="btn">{{translate('lp1.click_to_view')}}</a>
 				</div>
 				<div class="map-pin map-pin-4">
 					<div class="img-wrapper" style="background-image: url('{{asset("images/u4.jpg")}}')"></div>
-					<p>Tiffany <img src="{{asset("images/pin.svg")}}" alt="" width="20"> 1250m</p>
+					<p>Evelin <img src="{{asset("images/pin.svg")}}" alt="" width="20"> 480m</p>
 					<a href="javascript:;" class="btn">{{translate('lp1.click_to_view')}}</a>
 				</div>
 				<div class="map-pin map-pin-5">
 					<div class="img-wrapper" style="background-image: url('{{asset("images/u5.jpg")}}')"></div>
-					<p>Tiffany <img src="{{asset("images/pin.svg")}}" alt="" width="20"> 1250m</p>
+					<p>Diana <img src="{{asset("images/pin.svg")}}" alt="" width="20"> 2450m</p>
 					<a href="javascript:;" class="btn">{{translate('lp1.click_to_view')}}</a>
 				</div>
 				<div class="map-pin map-pin-6">
 					<div class="img-wrapper" style="background-image: url('{{asset("images/u6.jpg")}}')"></div>
-					<p>Tiffany <img src="{{asset("images/pin.svg")}}" alt="" width="20"> 1250m</p>
+					<p>Annalie <img src="{{asset("images/pin.svg")}}" alt="" width="20"> 1805m</p>
 					<a href="javascript:;" class="btn">{{translate('lp1.click_to_view')}}</a>
 				</div>
 			</section>
