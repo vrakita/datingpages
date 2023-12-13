@@ -25,12 +25,10 @@ if( ! function_exists('translate')) {
     function translate(string $key, $params = [])
     {
 
-        $application = \App\Application::getInstance();
-
         return array_reduce(
-            [$application->getLanguage(), ...explode('.', $key)],
+            [app()->getLanguage(), ...explode('.', $key)],
             fn($acc, $item) => substitute($acc[$item], $params) ?? null,
-            $application->getTranslations()
+            app()->getTranslations()
         ) ?? $key;
 
     }
@@ -55,7 +53,7 @@ if( ! function_exists('asset')) {
 
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http' . '://';
 
-        return $protocol . $_SERVER['SERVER_NAME'] . "/assets/" . \App\Application::getInstance()->getTemplate() . $path;
+        return $protocol . $_SERVER['SERVER_NAME'] . "/assets/" . app()->getTemplate() . $path;
 
     }
 
@@ -87,6 +85,15 @@ if( ! function_exists('getURLSegment')) {
         }
 
         return $parts[$segment] ?? null;
+    }
+
+}
+
+if( ! function_exists('app')) {
+
+    function app(): \App\Application
+    {
+        return \App\Application::getInstance();
     }
 
 }

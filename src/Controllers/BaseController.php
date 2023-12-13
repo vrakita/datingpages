@@ -12,10 +12,8 @@ class BaseController {
     public function __construct()
     {
 
-        $application = Application::getInstance();
-
-        $this->view = $application->getView();
-        $this->router = $application->getRouter();
+        $this->view = app()->getView();
+        $this->router = app()->getRouter();
     }
 
     public function render(string $template, array $params = [])
