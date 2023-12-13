@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{asset('style.css')}}">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
@@ -20,12 +20,13 @@
 <main id="app">
 
     <div class="background-video" :class="{'blure': !playing}">
-        <video
-                muted
-                ref="videoPlayer"
-                :src="videoSource"
-                @play="handlePlay"
-                @pause="handlePause"
+        <video playsinline
+            webkit-playsinline
+            muted
+            ref="videoPlayer"
+            :src="videoSource"
+            @play="handlePlay"
+            @pause="handlePause"
         ></video>
     </div>
     <section class="hero">
