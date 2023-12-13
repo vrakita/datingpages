@@ -39,14 +39,11 @@ if( ! function_exists('translate')) {
 
 function substitute($string, $params)
 {
-
-    foreach($params as $name => $value) {
-        if(strpos($string, '{' . $name . '}') !== false) {
-            $string = str_replace('{' . $name . '}', $value, $string);
-        }
-    }
-
-    return $string;
+    return array_reduce(array_keys($params), function ($string, $i) use($params) {
+        return strpos($string, '{' . $i . '}') !== false
+            ? str_replace('{' . $i . '}', $params[$i], $string)
+            : $string;
+    }, $string);
 }
 
 if( ! function_exists('asset')) {
