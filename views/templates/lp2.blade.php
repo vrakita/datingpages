@@ -24,7 +24,7 @@
             webkit-playsinline
             muted
             ref="videoPlayer"
-            :src="videoSource"
+            :src="videoSource + '#t=0.5'"
             @play="handlePlay"
             @pause="handlePause"
         ></video>
