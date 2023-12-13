@@ -58,7 +58,7 @@
         <transition name="fade" mode="out-in">
             <article v-if="currentStep === 3">
                 <h1><strong class="clr-gold">Vicky {{translate('lp2.cant_wait_to_chat')}}</h1>
-                <h2>Would you be willing to chat?</h2>
+                <h2>{{translate('lp2.are_you_looking')}}</h2>
                 <div class="btn-wrapper">
                     <a class="btn-circle btn-circle-white" href="{{$_ENV['REDIRECT_URL']}}">
                         <svg fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="40" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" stroke="none"/><path d="M18 6 6 18M6 6l12 12"/></svg>
