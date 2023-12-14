@@ -45,10 +45,7 @@ class Application
 
         $instance->translations = TranslationService::load();
 
-        $instance->router       = new Router;
-
-        $instance->router->get('/{template}', 'App\Controllers\HomeController@index');
-        $instance->router->set404('App\Controllers\BaseController@pageNotFound');
+        $instance->router       = $instance->registerRoutes();
 
         $instance->view         = new Blade(basePath('views'), basePath('cache'));
 
@@ -84,6 +81,17 @@ class Application
 
     protected function setLanguage()
     {
-        $this->language = isset($_GET['lang']) && in_array(strtolower($_GET['lang']), ['de', 'it', 'fr']) ? strtolower($_GET['lang']) : 'en';
+        $this->language = isset($_GET['lang']) && in_array(strtolower($_GET['lang']), TranslationService::LANGUAGES)
+            ? strtolower($_GET['lang'])
+            : 'en';
+    }
+
+    protected function registerRoutes(): Router
+    {
+        $router = new Router();
+
+        (fn($router) => require basePath('routes.php'))($router);
+
+        return $router;
     }
 }

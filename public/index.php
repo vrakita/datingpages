@@ -2,4 +2,4 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = \App\Application::run();
+\App\Application::run();
