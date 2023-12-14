@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <title>Dating Lander 1</title>
+        <title>SugarDaddy.date</title>
         <meta charset="UTF-8"/>
         <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
