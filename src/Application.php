@@ -28,30 +28,34 @@ class Application
     {
 
         if( ! static::$instance) {
-            static::$instance = new static;
+            return static::boot();
         }
 
         return static::$instance;
     }
-    public static function run() {
+    public static function boot() {
 
-        $instance               = static::getInstance();
+        if(static::$instance) {
+            return static::$instance;
+        }
+
+        static::$instance = new static();
 
         Dotenv::createImmutable(basePath())->load();
 
-        $instance->setLanguage();
+        static::$instance->setLanguage();
 
-        $instance->template     = getURLSegment();
+        static::$instance->template     = getURLSegment();
 
-        $instance->translations = TranslationService::load();
+        static::$instance->translations = TranslationService::load();
 
-        $instance->router       = $instance->registerRoutes();
+        static::$instance->view         = new Blade(basePath('views'), basePath('cache'));
 
-        $instance->view         = new Blade(basePath('views'), basePath('cache'));
+        static::$instance->router       = static::$instance->registerRoutes();
 
-        $instance->router->run();
+        static::$instance->router->run();
 
-        return $instance;
+        return static::$instance;
     }
 
     public function getLanguage(): string
