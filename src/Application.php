@@ -28,33 +28,34 @@ class Application
     {
 
         if( ! static::$instance) {
-            static::$instance = new static;
+            return static::boot();
         }
 
         return static::$instance;
     }
-    public static function run() {
+    public static function boot() {
 
-        $instance               = static::getInstance();
+        if(static::$instance) {
+            return static::$instance;
+        }
+
+        static::$instance = new static();
 
         Dotenv::createImmutable(basePath())->load();
 
-        $instance->setLanguage();
+        static::$instance->setLanguage();
 
-        $instance->template     = getURLSegment();
+        static::$instance->template     = getURLSegment();
 
-        $instance->translations = TranslationService::load();
+        static::$instance->translations = TranslationService::load();
 
-        $instance->router       = new Router;
+        static::$instance->view         = new Blade(basePath('views'), basePath('cache'));
 
-        $instance->router->get('/{template}', 'App\Controllers\HomeController@index');
-        $instance->router->set404('App\Controllers\BaseController@pageNotFound');
+        static::$instance->router       = static::$instance->registerRoutes();
 
-        $instance->view         = new Blade(basePath('views'), basePath('cache'));
+        static::$instance->router->run();
 
-        $instance->router->run();
-
-        return $instance;
+        return static::$instance;
     }
 
     public function getLanguage(): string
@@ -84,6 +85,17 @@ class Application
 
     protected function setLanguage()
     {
-        $this->language = isset($_GET['lang']) && in_array(strtolower($_GET['lang']), ['de', 'it', 'fr']) ? strtolower($_GET['lang']) : 'en';
+        $this->language = isset($_GET['lang']) && in_array(strtolower($_GET['lang']), TranslationService::LANGUAGES)
+            ? strtolower($_GET['lang'])
+            : 'en';
+    }
+
+    protected function registerRoutes(): Router
+    {
+        $router = new Router();
+
+        (fn($router) => require basePath('routes.php'))($router);
+
+        return $router;
     }
 }
