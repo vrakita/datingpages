@@ -27,7 +27,7 @@ if( ! function_exists('translate')) {
 
         return array_reduce(
             [app()->getLanguage(), ...explode('.', $key)],
-            fn($acc, $item) => substitute($acc[$item], $params) ?? null,
+            fn($acc, $item) => isset($acc[$item]) ? substitute($acc[$item], $params) : null,
             app()->getTranslations()
         ) ?? $key;
 
