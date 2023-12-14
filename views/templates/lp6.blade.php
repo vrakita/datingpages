@@ -81,8 +81,8 @@
                     <div class="box__body">
                         <p>Are you at least 24 years old? The women have requested that we not let those younger than 24 contact them because of past rude behavior by younger men.</p>
                         <div class="btn-wrapper">
-                            <a href="javascript:;" data-step="6" class="btn next">YES</a>
-                            <a href="javascript:;" data-step="6" class="btn next">NO</a>
+                            <a href="{{$_ENV['REDIRECT_URL']}}" class="btn">YES</a>
+                            <a href="{{$_ENV['REDIRECT_URL']}}" class="btn">NO</a>
                         </div>
                         <br>
                         <p class="mb0">{{translate('lp1.we_found_num')}} <strong class="number"></strong> {{translate('lp1.sugarbabies_in')}} <strong class="city"></strong></p>
