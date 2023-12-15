@@ -15,7 +15,7 @@
 
         <header class="header-main">
             <div class="container">
-                <a href="#" class="header-logo">
+                <a href="{{$_ENV['REDIRECT_URL']}}" class="header-logo">
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" viewBox="0 0 70.005 26">
                         <g id="SD_Logo_main" data-name="SD Logo main" transform="translate(-53.632 -236.402)">
                             <g id="Group_4" data-name="Group 4" transform="translate(53.632 236.402)">
@@ -55,7 +55,7 @@
                 <div class="right-nav">
                     <p>This offer expires in <span><i id="minutes">00</i> minutes</span> and <span><i id="seconds">00</i> seconds!</span></p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="60" viewBox="0 0 151 84" fill="none"><path fill="#c90000" d="M68.1 41.35c-17.996-.146-35.992-.263-53.988-.46-3.587-.04-7.18-.321-10.752-.672a2.954 2.954 0 0 1-2.532-2.166c-.293-.919.727-2.222 1.945-2.414 1.181-.186 2.357-.474 3.544-.546 7.583-.46 15.165-1.11 22.755-1.247 15.593-.28 31.19-.35 46.787-.368 14.797-.017 29.595.168 44.392.202 2.376.006 4.754-.294 7.126-.506a.972.972 0 0 0 .684-.627c.042-.366-.066-.984-.31-1.115-4.547-2.472-9.038-5.073-13.714-7.278-10.877-5.132-21.081-11.425-31.278-17.74-1.676-1.037-3.432-2.091-4.108-4.15-.123-.375-.315-1.017-.158-1.142A4.631 4.631 0 0 1 80.472.03a4.28 4.28 0 0 1 2.305.368 150.117 150.117 0 0 1 7.556 3.653c17.718 9.25 35.43 18.511 53.136 27.782 6.688 3.479 9.867 6.852 1.838 14.5-2.313 2.205-4.653 4.406-7.168 6.366a4668.43 4668.43 0 0 1-35.121 27.137 38.132 38.132 0 0 1-5.095 3.085c-1.159.629-2.318.256-3.319-.498-1.1-.83-1.784-3.244-1.404-4.305.843-2.356 2.523-4.085 4.328-5.65a2230.126 2230.126 0 0 1 20.953-17.95c4.563-3.882 9.174-7.706 13.73-11.596.225-.191.236-.787.145-1.145a1.03 1.03 0 0 0-.718-.63c-2.382-.155-4.767-.354-7.15-.342-18.797.1-37.593.223-56.39.372l.002.173Z"/></svg>
-                    <a href="#" class="btn-header">SIGN UP TODAY!</a>
+                    <a href="{{$_ENV['REDIRECT_URL']}}" class="btn-header">SIGN UP TODAY!</a>
                 </div>
             </div>
         </header>
@@ -101,7 +101,7 @@
                         </svg>
                         <h1>Meet love minded singles looking to have <strong>naughty fun!</strong></h1>
                         <h2>Due to high numbers of women, for a limited time only, men can join for free! </h2>
-                        <a href="#" class="btn">Sign up today!</a>
+                        <a href="{{$_ENV['REDIRECT_URL']}}" class="btn">Sign up today!</a>
                         <ul>
                             <li><a href="{{$_ENV['REDIRECT_URL']}}"><img src="{{asset('avatar1.webp')}}" alt=""></a></li>
                             <li><a href="{{$_ENV['REDIRECT_URL']}}"><img src="{{asset('avatar2.webp')}}" alt=""></a></li>
