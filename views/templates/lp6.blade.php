@@ -85,7 +85,7 @@
                             <a href="{{$_ENV['REDIRECT_URL']}}" class="btn">{{translate('lp6.no')}}</a>
                         </div>
                         <br>
-                        <p class="mb0">{{translate('lp1.we_found_num')}} <strong class="number"></strong> {{translate('lp1.sugarbabies_in')}} <strong class="city"></strong></p>
+                        <p class="mb0">{{translate('lp1.we_found_num')}} <strong class="number"></strong> {{translate('lp6.sugarbabies')}} <strong class="city"></strong></p>
                     </div>
                 </article>
             </section>
