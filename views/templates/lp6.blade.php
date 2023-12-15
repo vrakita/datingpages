@@ -14,7 +14,7 @@
             <section class="hero">
                 <article id="box1" class="box active">
                     <div class="box__header">
-                        <h1>The ONLY site that gets you a girl!</h1>
+                        <h1>{{translate('lp6.the_only_site')}}</h1>
                     </div>
                     <div class="box__body">
                         <div class="video">
@@ -22,67 +22,67 @@
                             <img src="{{asset('video_bar.jpg')}}" alt="">
                         </div>
 
-                        <h2><strong>WARNING!</strong></h2>
-                        <p>There are LOTS of gorgeous women on this site. <br>
-                        Please be discreet. </p>
+                        <h2><strong>{{translate('lp6.warning')}}</strong></h2>
+                        <p>{{translate('lp6.there_are_lots_of')}} <br>
+                        {{translate('lp6.please_be_discreet')}} </p>
 
-                        <a href="javascript:;" data-step="2" class="btn next">Ok, I will</a>
+                        <a href="javascript:;" data-step="2" class="btn next">{{translate('lp6.ok_i_will')}}</a>
                     </div>
                 </article>
                 <article id="box2" class="box">
                     <div class="box__header">
-                        <h1>IMPORTANT!</h1>
+                        <h1>{{translate('lp6.important')}}</h1>
                     </div>
                     <div class="box__body">
-                        <p>Before we can show you a list and photos of women who are looking for a man right now, we need to ask a few quick questions.</p>
-                        <a href="javascript:;" data-step="3" class="btn next">Continue</a>
+                        <p>{{translate('lp6.before_we_can_show')}}</p>
+                        <a href="javascript:;" data-step="3" class="btn next">{{translate('lp6.continue')}}</a>
                     </div>
                 </article>
                 <article id="box3" class="box">
                     <div class="box__header">
-                        <h1>Question 1</h1>
+                        <h1>{{translate('lp6.question1')}} 1</h1>
                     </div>
                     <div class="box__body">
-                        <p>Many of these women are desperate girls seeking serious relationships. Do you agree to keep the identity of these women a secret?</p>
+                        <p>{{translate('lp6.many_of_these')}}</p>
                         <div class="btn-wrapper">
-                            <a href="javascript:;" data-step="4" class="btn next">YES</a>
-                            <a href="javascript:;" data-step="4" class="btn next">NO</a>
+                            <a href="javascript:;" data-step="4" class="btn next">{{translate('lp6.yes')}}</a>
+                            <a href="javascript:;" data-step="4" class="btn next">{{translate('lp6.no')}}</a>
                         </div>
                     </div>
                 </article>
                 <article id="box4" class="box">
                     <div class="box__header">
-                        <h1>Question 2</h1>
+                        <h1>{{translate('lp6.question1')}} 2</h1>
                     </div>
                     <div class="box__body">
-                        <p>These women have asked us to not allow men that are not ready for new acquaintances. Our women are looking ONLY for new connections. Do you agree to this request?</p>
+                        <p>{{translate('lp6.these_women')}}</p>
                         <div class="btn-wrapper">
-                            <a href="javascript:;" data-step="5" class="btn next">YES</a>
-                            <a href="javascript:;" data-step="5" class="btn next">NO</a>
+                            <a href="javascript:;" data-step="5" class="btn next">{{translate('lp6.yes')}}</a>
+                            <a href="javascript:;" data-step="5" class="btn next">{{translate('lp6.no')}}</a>
                         </div>
                     </div>
                 </article>
                 <article id="box5" class="box">
                     <div class="box__header">
-                        <h1>Question 3</h1>
+                        <h1>{{translate('lp6.question1')}} 3</h1>
                     </div>
                     <div class="box__body">
-                        <p>Do you agree woman will make the first step?</p>
+                        <p>{{translate('lp6.do_you_agree')}}</p>
                         <div class="btn-wrapper">
-                            <a href="javascript:;" data-step="6" class="btn next">YES</a>
-                            <a href="javascript:;" data-step="6" class="btn next">NO</a>
+                            <a href="javascript:;" data-step="6" class="btn next">{{translate('lp6.yes')}}</a>
+                            <a href="javascript:;" data-step="6" class="btn next">{{translate('lp6.no')}}</a>
                         </div>
                     </div>
                 </article>
                 <article id="box6" class="box">
                     <div class="box__header">
-                        <h1>Question 4</h1>
+                        <h1>{{translate('lp6.question1')}} 4</h1>
                     </div>
                     <div class="box__body">
-                        <p>Are you at least 24 years old? The women have requested that we not let those younger than 24 contact them because of past rude behavior by younger men.</p>
+                        <p>{{translate('lp6.are_you_at_least_24')}}</p>
                         <div class="btn-wrapper">
-                            <a href="{{$_ENV['REDIRECT_URL']}}" class="btn">YES</a>
-                            <a href="{{$_ENV['REDIRECT_URL']}}" class="btn">NO</a>
+                            <a href="{{$_ENV['REDIRECT_URL']}}" class="btn">{{translate('lp6.yes')}}</a>
+                            <a href="{{$_ENV['REDIRECT_URL']}}" class="btn">{{translate('lp6.no')}}</a>
                         </div>
                         <br>
                         <p class="mb0">{{translate('lp1.we_found_num')}} <strong class="number"></strong> {{translate('lp1.sugarbabies_in')}} <strong class="city"></strong></p>
@@ -92,6 +92,6 @@
         </main>
 
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="{{asset("js/app.js")}}"></script>
+        <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
