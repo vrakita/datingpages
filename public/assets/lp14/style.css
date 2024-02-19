@@ -1,0 +1,317 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+    /* overflow: hidden; */
+	font-family: 'Arial', sans-serif;
+
+}
+
+
+@font-face {
+    font-family: 'NeonTubes2';
+    src: url('fonts/NeonTubes2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TiltNeon-Regular';
+    src: url('fonts/TiltNeon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1 {
+	font-size: 80px;
+	margin-bottom: 10px;
+    line-height: 1.3;
+    color: rgba(204, 0, 255, 0.63);
+    text-shadow: 1px 1px 2px white, -1px -1px 2px white, 3px 3px 4px rgb(200, 130, 255), -3px -3px 4px rgb(200, 130, 255), 4px 4px 5px rgb(204, 0, 255), -4px -4px 5px rgb(204, 0, 255);
+    font-family: 'TiltNeon-Regular';
+    margin-bottom: 35px;
+    max-width: 1000px;
+    width: 80%;
+    text-transform: uppercase;
+}
+
+h2 {
+    color:  #072538;
+	font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #291717;
+    font-weight: 500;
+}
+
+.text-small {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+strong {
+	font-weight: 700;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.text-left {
+    text-align: left!important;
+}
+
+main {
+    height: 100vh;
+    position: relative;
+    background-image: url(images/backgroundImage.jpg);
+    background-image: url("images/ellipse.png"), url("images/backgroundImage.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 130px 40px;
+    overflow: hidden;
+}
+
+.main-img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+section {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 5;
+}
+
+.btn {
+    /* background-image: url(images/button.png); */
+    /* background-size: 100% 100%; */
+    /* background-repeat: no-repeat; */
+    padding: 0 70px;
+    min-width: 225px;
+    height: 60px;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'TiltNeon-Regular';
+    font-size: 22px;
+    letter-spacing: 3px;
+    outline: 3px solid white;
+    border: 2px solid rgba(204, 0, 255, 0.6);
+    box-shadow: 0px 5.1999998093px 4px 0px rgba(0, 13, 21, 0.7), 0px 12px 15.6000003815px 0px rgba(204, 0, 255, 0.8), -0.5199999809px 1.0399999619px 0.5199999809px 0px rgb(200, 130, 255) inset;
+    background: rgba(143, 0, 255, 0.2);
+
+}
+
+p {
+    font-family: 'TiltNeon-Regular';
+    color: #fff;
+    margin-bottom: 35px;
+    max-width: 800px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 25px 15px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 700px;
+}
+
+.checkbox input {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.checkbox label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.checkbox .circle-check {
+    width:32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.checkbox .circle-check svg {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.checkbox input:checked + label svg {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+@media(max-width: 1250px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .main-img {
+        max-width: 100%;
+        width: 600px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 991px) {
+
+    h1 {
+        width: 100%;
+    }
+
+    .main-img {
+        position: relative;
+        right: auto;
+        top: 0;
+        transform: translate(0,0);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .checkbox-wrapper {
+        justify-content: center;
+    }
+
+    .btn-wrapper {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 768px) {
+
+    main {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    .checkbox-wrapper {
+        gap: 10px;
+    }
+
+    .btn {
+        height: 60px;
+        min-width: 100px;
+        padding: 0 20px;
+    }
+}
+
+
+
+
