@@ -1,0 +1,307 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+    /* overflow: hidden; */
+	font-family: 'Arial', sans-serif;
+
+}
+
+
+@font-face {
+    font-family: 'NeonTubes2';
+    src: url('fonts/NeonTubes2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TiltNeon-Regular';
+    src: url('fonts/TiltNeon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1 {
+	font-size: 66px;
+    font-family: 'NeonTubes2';
+	margin-bottom: 10px;
+    line-height: 1.3;
+    color: rgb(243, 46, 124);
+    text-shadow: 1px 1px 2px white, -1px -1px 2px white, 3px 3px 4px rgb(255, 38, 194), -3px -3px 4px rgb(255, 38, 194), 10px 10px 50px rgba(251, 55, 255, 0.2), -10px -10px 50px rgba(251, 55, 255, 0.2);
+    margin-bottom: 35px;
+    max-width: 1000px;
+    width: 80%;
+}
+
+h2 {
+    color:  #072538;
+	font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #291717;
+    font-weight: 500;
+}
+
+.text-small {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+strong {
+	font-weight: 700;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.text-left {
+    text-align: left!important;
+}
+
+main {
+    height: 100vh;
+    position: relative;
+    background-image: url(images/backgroundImage.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 55px 62px;
+    overflow: hidden;
+}
+
+.main-img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(10%, -50%);
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+section {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 5;
+}
+
+.btn {
+    background-image: url(images/button.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+    min-width: 225px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'TiltNeon-Regular';
+    font-size: 20px;
+
+}
+
+p {
+    font-family: 'TiltNeon-Regular';
+    color: #fff;
+    margin-bottom: 35px;
+    max-width: 710px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 25px 15px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 700px;
+}
+
+.checkbox input {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.checkbox label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.checkbox .circle-check {
+    width:32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.checkbox .circle-check svg {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.checkbox input:checked + label svg {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+@media(max-width: 1250px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .main-img {
+        max-width: 100%;
+        width: 600px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 991px) {
+
+    h1 {
+        width: 100%;
+    }
+
+    .main-img {
+        position: relative;
+        right: auto;
+        top: 0;
+        transform: translate(0,0);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .checkbox-wrapper {
+        justify-content: center;
+    }
+
+    .btn-wrapper {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 768px) {
+
+    main {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    .checkbox-wrapper {
+        gap: 10px;
+    }
+
+    .btn {
+        height: 60px;
+        min-width: 100px;
+    }
+}
+
+
+
+
